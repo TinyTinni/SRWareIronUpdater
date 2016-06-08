@@ -7,9 +7,10 @@ Service will be executed on a daily base.
 
 #How-To Use
 Execute the script using python.
+
     Default install path:
-        - "$ProgramFiles$/SRWare Iron" for 32-bit
-        - "$ProgramFiles$/SRWare Iron (64-bit)" for 64-bit
+    - "%ProgramFiles%/SRWare Iron" for 32-bit
+    - "%ProgramFiles%/SRWare Iron (64-bit)" for 64-bit
 
     Command lines:
     - (optional): "-p <path>" Specify SRWare Iron Install Path (Default: C:\Program Files\SRWare Iron (64-bit)" (64-bit prefix just for 64-bit windows, if you use 32-bit browser on a 64-bit os, please specify install path) 
