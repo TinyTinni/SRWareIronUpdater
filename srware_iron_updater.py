@@ -68,7 +68,7 @@ def getExeName(use64bit):
         return "srware_iron.exe" #32-bit
         
 def getInstallPath():
-    result = os.environ['PROGRAMFILES']+"\\SRWare Iron"
+    result = os.environ['ProgramW6432']+"\\SRWare Iron"
     if is64Windows():
         result += " (64-Bit)"
     return result
@@ -78,11 +78,11 @@ if __name__ == "__main__":
     parser.add_argument("-p", action="store", dest="installpath", 
                         default = getInstallPath(),
                         help="Specify SRWare Iron Install Path  (Default: "+getInstallPath()+")")
-    parser.add_argument("-x86", action="store_true", default= not is64Windows(),
-                        dest="archix86", help="Use 32-bit Iron (Default: " + str(not is64Windows()) + ")")
+    parser.add_argument("-x86", action="store_true",dest="archix86", default= not is64Windows(),
+                        help="Use 32-bit Iron (Default: " + str(not is64Windows()) + ")")
     parsedArgs = parser.parse_args()
-    use64bit = not parser.archix86
-
+    
+    use64bit = not parsedArgs.archix86
     downloadExeName = getExeName(use64bit)
     installedVersion = getInstalledVersion(parsedArgs.installpath )
     onlineVersion = getOnlineVersion()
