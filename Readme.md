@@ -5,7 +5,7 @@ Tested with Python 3.4 and 3.5.1.
 Two addtional scripts provide easy script registration as a service for windows.
 Service will be executed on a daily base.
 
-#How-To Use
+##How-To Use
 Execute the script using python.
 
     Default install path:
@@ -18,3 +18,7 @@ Execute the script using python.
     
 The provided "register" scripts automatically registers the update-script to the windows task scheduler as a service.
 Make sure, your python was installed with path variables, otherwise you have to define the path to your python executable manually.
+
+## License
+
+[MIT License](./LICENSE) © Matthias Möller. Made with ♥ in Germany.
