@@ -28,9 +28,8 @@ import argparse
 def getOnlineVersion():
     res = urllib.request.urlopen("https://www.srware.net/software_srware_iron_download.php")
     html = str(res.read())
-    html = "Version: <strong>50.0.2650.0</strong><br><br>"
     p = re.compile("Version: <strong>(\d+.\d+.\d+.\d+)</strong><br><br>")
-    m = p.match(html)
+    m = p.search(html)
     result = m.group(1)
     print("Online Version: " + result)
     return result
@@ -67,11 +66,11 @@ def getExeName(use64bit):
     else:
         return "srware_iron.exe" #32-bit
         
-def getInstallPath():
-    result = os.environ['ProgramW6432']+"\\SRWare Iron"
+def getInstallPath(): 
     if is64Windows():
-        result += " (64-Bit)"
-    return result
+        return os.environ['PROGRAMW6432']+"\\SRWare Iron (64-Bit)"
+    else:
+        return os.environ['PROGRAMFILES']+"\\SRWare Iron"
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Updates/installs SRWare Iron browser")
