@@ -1,4 +1,7 @@
 # Simple SRWare Iron Updater
+
+_DEPRECATED_ [use official updater](https://www.srware.net/forum/viewtopic.php?f=18&t=11751)
+
 Provides a simple Python script for installing and updating [SRWare Iron Webbrowser](https://www.srware.net/software_srware_iron_download.php).
 Tested with Python 3.4 and 3.5.1.
 
